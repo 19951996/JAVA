@@ -83,6 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                <form action="adminServlet?action=addtrain" method="post">
 		<table class="table table-bordered,table table-hover" ; >
 			<tr>
+			    <td>车次ID</td>
 				<td style="text-align: center;">车名</td>
 				<td style="text-align: center;">车长</td>
 				<td style="text-align: center;">软卧个数</td>
@@ -93,6 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td style="text-align: center;">操作</td>
 			</tr>
 			<tr class="add">
+			    <td><span style="color:red;">${requestScope.error}</span></td> 
 				<td><input class="form-control" style="width:100px;" type="text" name="name"></td>
 				<td><input class="form-control" style="width:100px;" type="text" name="length"></td>
 				<td><input class="form-control" style="width:100px;" type="text" name="soft"></td>
@@ -108,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                </select></td>
 				<td><input style="width:100px;"type="submit" name="" value="添加" class="btn btn-info"></td>
 			</tr>
-			 <tr><td><span style="color:red;">${requestScope.error}</span></td> </tr>
+			 
 		</table>
 		 </form>
 	</div>
@@ -117,13 +119,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <table style="margin-top: -20px;" class="table table-bordered,table table-hover";>
            <c:forEach items="${requestScope.list}" var="s">
            <tr>
-           <td>${s.name}</td>
-           <td>${s.length}</td>
-           <td>${s.soft}</td>
-           <td>${s.hard}</td>
-           <td>${s.hard_seat}</td>
-           <td>${s.restrict_count}</td>
-           <td>${s.train_type}</td>
+           <td >${s.t_id}</td>
+           <td style="text-align: center;"><p style="margin-left:-13px;">${s.name}</p></td>
+           <td style="text-align: center;">${s.length}</td>
+           <td style="text-align: center;">${s.soft}</td>
+           <td style="text-align: center;">${s.hard}</td>
+           <td style="text-align: center;">${s.hard_seat}</td>
+           <td style="text-align: center;">${s.restrict_count}</td>
+           <td style="text-align: center;">${s.train_type}</td>
            <td style="text-align:center; width:130px"><a href="adminServlet?action=deteleByName&name=${s.name}" class="btn btn-danger">删除</button>
            </tr>
            </c:forEach>

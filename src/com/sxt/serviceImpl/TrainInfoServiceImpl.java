@@ -23,6 +23,11 @@ public class TrainInfoServiceImpl implements TrainInfoService{
 	public TrainInfo findByName(String name) throws Exception {
 		return train.findByName(name);
 	}
+
+	
+	public TrainInfo findByt_id(int t_id) throws Exception {	
+		return train.findByt_id(t_id);
+	}
 	
 
 }

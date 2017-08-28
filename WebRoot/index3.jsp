@@ -83,7 +83,7 @@ var test=new Vcity.CitySelector({input:'citySelect'});
 	        <input  type="hidden" name="action" value="addLine">
 	        <table class="table table-bordered";   border="1px;" cellpadding="0" cellspacing="0" ;>
 		    <tr>			
-		    <td style="text-align: center;">火车ID</td>
+		    <td style="text-align: center;">车次ID</td>
 			<td style="text-align: center;">软卧价格</td>
 			<td style="text-align: center;">硬卧价格</td>
 			<td style="text-align: center;">硬座价格</td>

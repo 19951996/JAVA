@@ -1,6 +1,7 @@
 package com.sxt.vo;
 
 public class TrainInfo {
+	private int t_id;//车次ID
 	private String name;//火车车次
 	private int length;//
 	private int soft;
@@ -9,6 +10,12 @@ public class TrainInfo {
 	private int no_seat;
 	private int restrict_count;
 	private String train_type;
+	public int getT_id() {
+		return t_id;
+	}
+	public void setT_id(int t_id) {
+		this.t_id = t_id;
+	}
 	public String getName() {
 		return name;
 	}

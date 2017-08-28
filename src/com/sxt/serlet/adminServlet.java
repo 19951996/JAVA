@@ -216,13 +216,13 @@ public class adminServlet extends HttpServlet {
 				line.setEnd_station(end);
 				line.setStart_time(date1);
 				line.setEnd_time(date);
-					if (lineservice.findt_Id(t_id2)==null) {
+					if (traininfo1.findByt_id(t_id3)!=null) {
 						boolean b = lineservice.addLine(line);
 						if (b == true) {
 								request.getRequestDispatcher("adminServlet?action=findall2").forward(request, response);
 							}		
 			              }else{
-			  				request.setAttribute("error", "id名不能重复");
+			  				request.setAttribute("error", "车次ID不存在，请重新输入");
 							request.getRequestDispatcher("adminServlet?action=findall2").forward(request, response);
 						   }
 		           }

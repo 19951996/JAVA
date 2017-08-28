@@ -51,4 +51,10 @@ public class TrainInfoDaoImpl implements TrainInfoDao{
 		return qr.query(sql,new BeanHandler(TrainInfo.class),name);
 		
 	}
+	//查找所有车次的t_id
+	public TrainInfo findByt_id(int t_id) throws Exception {
+		String sql = "select * from traininfo where t_Id=?";
+		QueryRunner qr = new QueryRunner(DBUtil.getDataSource());
+		return qr.query(sql,new BeanHandler(TrainInfo.class),t_id);
+	}
 }
